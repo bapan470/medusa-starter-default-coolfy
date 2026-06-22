@@ -1,5 +1,11 @@
+[variables]
+NODE_ENV = "development"
+
+[phases.install]
+cmds = ["yarn install"]
+
 [phases.build]
-cmds = ["yarn install", "yarn medusa build"]
+cmds = ["yarn medusa build"]
 
 [start]
 cmd = "yarn medusa db:migrate && yarn medusa start"
